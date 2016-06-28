@@ -1,0 +1,19 @@
+<div class="text-centred">
+  <h1> Listado de artículos </h1>
+</div>
+
+<div class="box-centred">
+  <table>
+    <tr>
+      <th> Título </th>
+      <th> Texto</th>
+    </tr>
+
+    <% @articles.each do |article| %>
+      <tr>
+        <th> <%= article.title %> </th>
+        <th> <%= article.text %> </th>
+      </tr>
+    <% end %>
+  </table>
+</div>
