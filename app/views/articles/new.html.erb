@@ -2,9 +2,23 @@
   <h1> Nuevo artículo </h1>
 </div>
 
-<div class="box-centred">
   <%= form_for :article , url: articles_path do |f| %>
 
+    <% if @article.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@article.errors.count, "error") %> prohibited
+            this article from being saved:
+          </h2>
+          <ul>
+            <% @article.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+  <div class="box-centred">
     <p>
       <%= f.label :title, "Título" %> <br />
       <%= f.text_field :title, class: "form-control" %>
@@ -19,7 +33,7 @@
       <%= f.submit "Guardar el artículo" %>
     </p>
   <% end %>
-  
+
   <br />
   <%= link_to 'Atrás', root_path %>
 </div>
