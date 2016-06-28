@@ -2,6 +2,7 @@
   <h1> Nuevo artículo </h1>
 </div>
 
+<div class="box-centred">
   <%= form_for :article , url: articles_path do |f| %>
 
     <p>
@@ -18,3 +19,4 @@
       <%= f.submit "Guardar el artículo" %>
     </p>
   <% end %>
+</div>

@@ -17,3 +17,15 @@
  .text-centred {
    text-align: center;
  }
+
+.box-centred {
+  border: 5px solid rgb(24, 80, 153);
+  height: 200px;
+  width: 300px;
+  padding: 20px;
+
+  float: right;
+  position: relative;
+  left: -37%; /* or right 50% */
+  text-align: left;
+}
