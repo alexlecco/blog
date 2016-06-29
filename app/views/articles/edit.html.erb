@@ -1,8 +1,8 @@
 <div class="text-centred">
-  <h1> Nuevo artículo </h1>
+  <h1> Editar artículo </h1>
 </div>
 
-<%= form_for :article, url: articles_path do |f| %>
+<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
 
   <% if @article.errors.any? %>
     <div id="error_explanation">
