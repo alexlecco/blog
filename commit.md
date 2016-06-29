@@ -1,1 +1,1 @@
-Article's updating action and view were added
+Using partials to clean up duplication in views
