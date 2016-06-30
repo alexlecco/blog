@@ -1,1 +1,1 @@
-Using partials to clean up duplication in views
+6.1 Generating a Model

@@ -1,19 +1,15 @@
-<div>
-  <h1> Artículo creado </h1>
-</div>
+<h1> Artículo creado </h1>
 
-<div>
-  <p>
-    <strong> Titulo: </strong>
-    <%= @article.title %>
-  </p>
+<p>
+  <strong> Titulo: </strong>
+  <%= @article.title %>
+</p>
 
-  <p>
-    <strong> Texto: </strong>
-    <%= @article.text %>
-  </p>
+<p>
+  <strong> Texto: </strong>
+  <%= @article.text %>
+</p>
 
-  <br />
-  <%= link_to 'Editar', edit_article_path(@article) %>
-  <%= link_to 'Atrás', articles_path %>
-</div>
+<br />
+<%= link_to 'Editar', edit_article_path(@article) %>
+<%= link_to 'Atrás', articles_path %>
