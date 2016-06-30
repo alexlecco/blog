@@ -10,6 +10,34 @@
   <%= @article.text %>
 </p>
 
+<h2> Comentarios </h2>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong> Usuario: </strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong> Comentario: </strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2> Comenta: </h2>
+<%= form_for([@article, @article.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter, 'Usuario' %> <br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body, 'Contenido' %> <br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit 'Crear comentario' %>
+  </p>
+<% end %>
+
 <br />
 <%= link_to 'Editar', edit_article_path(@article) %>
 <%= link_to 'Atrás', articles_path %>
