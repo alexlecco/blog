@@ -11,17 +11,7 @@
 </p>
 
 <h2> Comentarios </h2>
-<% @article.comments.each do |comment| %>
-  <p>
-    <strong> Usuario: </strong>
-    <%= comment.commenter %>
-  </p>
-
-  <p>
-    <strong> Comentario: </strong>
-    <%= comment.body %>
-  </p>
-<% end %>
+<%= render @article.comments %>
 
 <h2> Comenta: </h2>
 <%= form_for([@article, @article.comments.build]) do |f| %>
